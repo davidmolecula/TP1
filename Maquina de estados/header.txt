@@ -1,0 +1,37 @@
+/* MEMORIA DESCRIPTIVA:
+
+Se realizara una maquina de estados que cumpla la funcion de una proteccion de sobretension. 
+Funcionara de la siguiente manera se mide la tensión del cable y si esta excede un determinado valor entonces se acciona la proteccion y se interrumpe la corriente,
+protegiendo así a la instalación electrica del lugar, una vez que pasa esto en una instalacion la DPS debe ser cambiada manualmente, en nuestra maquina de estados
+esto se corresponde con un estado de la maquina en donde no hay corriente, cuando se cambie el DPS, la maquina volvera al estado inicial donde hay corriente y la
+proteccion no es accionada. */
+#ifndef LIBRERIA_H
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+
+typedef enum {
+	notokay=0,
+	okay=1
+}estados_t;
+
+typedef struct {
+ estados_t cables;
+ int tension_limite;
+ int tension;
+ char avisos[50];	
+}datos_t;
+
+datos_t f_inicio(void);
+estados_t f_espera(datos_t);
+estados_t f_desconexion(datos_t);
+int f_medir_tension();
+estados_t f_estados(char, char );
+char *obtenerclave(char *clave);
+
+#endif
+
+
+

@@ -1,0 +1,9 @@
+/*No se usa */
+/*cargo el estado de los cables en 1, que significa que esta bien (okay)*/
+cables okay
+/* La tension a la cual se activa la proteccion se establece como 1800 volts */
+tension_limite 1800
+/* Inventamos una tension actual medida */
+tension 60
+/*Avisos dira que esta todo bien */
+avisos Todo_Okay
