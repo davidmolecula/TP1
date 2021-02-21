@@ -5,3 +5,8 @@ Funcionara de la siguiente manera se mide la tensión del cable y si esta excede
 protegiendo así a la instalación electrica del lugar, una vez que pasa esto en una instalacion la DPS debe ser cambiada manualmente, en nuestra maquina de estados
 esto se corresponde con un estado de la maquina en donde no hay corriente, cuando se cambie el DPS, la maquina volvera al estado inicial donde hay corriente y la
 proteccion no es accionada.
+
+
+
+
+https://github.com/davidmolecula/TP1/blob/main/Diagrama%20de%20estados.png
