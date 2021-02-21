@@ -13,7 +13,7 @@ int main() {
 	estados_t estado = okay; //inicializo la maquina con
     estados_t (*fsm[])(datos_t) = {f_desconexion, f_espera};/* Declaro el vector puntero a funciones que va a llamar a las funciones y pasarles la 
 	estructura segun el estado en el que se encuentre la maquina */
-    config=f_inicio(); // Llamo a la funcion inicio que será la que lea el archivo de configuracion y establezca el estado de la maquina
+    config=f_inicio(); // Llamo a la funcion inicio que serÃ¡ la que lea el archivo de configuracion y establezca el estado de la maquina
     while(1) estado = (*fsm[estado])(config);
 	printf("%d \t %d \t %d \t %s\n", config.cables, config.tension_limite, config.tension, config.avisos);
 	return 0;
@@ -31,10 +31,10 @@ int f_medir_tension(){
 	int tension;
 	printf("\nTension: ");
 	scanf("%d",&tension);
-	return (int)tension;
+	return tension;
 }
 
-estados_t f_estados(char tension, char tension_limite)
+estados_t f_estados(int tension, int tension_limite)
 {
 	estados_t estado;
 	if((tension> tension_limite)){
@@ -77,7 +77,7 @@ datos_t f_inicio() {
 	 		val=obtenerclave(clave);
 	 		for(i=0;i<4;i++)
 	 		{
-	 			if(!strcmp(clave, variables[i])){ // Acá es cuando compara, por eso lee el nombre de la variable en clave, los mismos nombres que guarda en variables
+	 			if(!strcmp(clave, variables[i])){ // AcÃ¡ es cuando compara, por eso lee el nombre de la variable en clave, los mismos nombres que guarda en variables
 	 				switch(i)
 	 				{
 	 					case 0: configuracion.cables=atoi(val); // Guarda los datos en la estructura
