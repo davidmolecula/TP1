@@ -10,4 +10,4 @@ proteccion no es accionada.
 
 
 
-![imagen](http:/raw.githubusercontent.com/davidmolecula/TP1/blob/main/Diagramadeestados.png)
+![imagen](https://github.com/davidmolecula/TP1/blob/main/Diagrama%20de%20estados.png)
