@@ -13,8 +13,8 @@ proteccion no es accionada. */
 
 
 typedef enum {
-	notokay=0,
-	okay=1
+	okay=0,
+	notokay=1
 }estados_t;
 
 typedef struct {
