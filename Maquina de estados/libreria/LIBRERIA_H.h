@@ -12,8 +12,8 @@ typedef enum {
 
 typedef enum{
 	cables=0,
-	tension=1,
-	tension_limite=2,
+	tension_limite=1,
+	tension=2,
 	avisos=3
 }claves_t;
 
