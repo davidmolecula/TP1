@@ -45,7 +45,7 @@ datos_t f_inicio() {
 	y la posicion de memoria donde estara mi variable */
 	char variables[4][50]={"cables","tension_limite","tension","avisos"}, i; /* Guardo estas cadenas con los nombres de mis variables para comparar mas adelante */
 	datos_t configuracion; 
-	claves_t;
+	claves_t claves;
  	if(!(config=fopen("Config.txt","rb"))){ /* Intento abrir el archivo config.txt, si no se puede lo avisa por pantalla y tira error */
  		printf("\nNo se encontro el archivo\n");
  		
@@ -58,7 +58,7 @@ datos_t f_inicio() {
 	 		val=obtenerclave(clave);
 	 		for(i=0;i<4;i++)
 	 		{
-	 			if(!strcmp(clave, variables[i])){ // Acá es cuando compara, por eso lee el nombre de la variable en clave, los mismos nombres que guarda en variables
+	 			if(!strcmp(clave, variables[i])){ // AcÃ¡ es cuando compara, por eso lee el nombre de la variable en clave, los mismos nombres que guarda en variables
 	 				switch(i)
 	 				{
 	 					case cables: configuracion.cables=atoi(val); // Guarda los datos en la estructura
