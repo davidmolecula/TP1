@@ -1,4 +1,4 @@
-#include "C:\Users\user\Documents\Cursadas\Info II\2020\Maquina de estados\header.txt"
+#include "...\libreria\LIBRERIA_H.h"
 
 
 int main() 
